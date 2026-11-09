@@ -121,6 +121,7 @@ select {
 }
 
 .header-call,
+.corporate-login,
 .primary-btn,
 .secondary-btn,
 .plan-card a {
@@ -131,6 +132,61 @@ select {
   min-height: 46px;
   border-radius: 8px;
   font-weight: 800;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.corporate-login {
+  position: relative;
+  padding: 10px 15px;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid var(--ink);
+  box-shadow: 5px 5px 0 rgba(0, 127, 122, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.corporate-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.16) 48%, transparent 70%);
+  transform: translateX(-120%);
+  animation: corporate-login-shine 5s ease-in-out infinite;
+}
+
+.corporate-login > * {
+  position: relative;
+}
+
+.corporate-login .bi-person-badge-fill {
+  color: var(--yellow);
+}
+
+.corporate-login:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(0, 127, 122, 0.9);
+}
+
+.corporate-login:focus-visible,
+.header-call:focus-visible {
+  outline: 3px solid rgba(0, 127, 122, 0.34);
+  outline-offset: 3px;
+}
+
+.corporate-label-short {
+  display: none;
+}
+
+@keyframes corporate-login-shine {
+  0%, 72%, 100% { transform: translateX(-120%); }
+  86% { transform: translateX(120%); }
 }
 
 .header-call {
@@ -659,11 +715,40 @@ h3 {
     display: none;
   }
 
+  .header-actions {
+    gap: 7px;
+  }
+
+  .corporate-login {
+    min-height: 40px;
+    padding: 8px 9px;
+    gap: 5px;
+    box-shadow: 3px 3px 0 rgba(0, 127, 122, 0.9);
+    font-size: 0.76rem;
+  }
+
+  .corporate-label {
+    display: none;
+  }
+
+  .corporate-label-short {
+    display: inline;
+  }
+
+  .corporate-login .bi-arrow-up-right {
+    display: none;
+  }
+
   .header-call {
     min-height: 40px;
-    padding: 8px 10px;
+    width: 40px;
+    padding: 8px;
     box-shadow: 3px 3px 0 var(--ink);
     font-size: 0.88rem;
+  }
+
+  .header-call span {
+    display: none;
   }
 
   h1 {
@@ -710,5 +795,15 @@ h3 {
     padding: 22px 18px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .header-call {
+    display: none;
   }
 }
