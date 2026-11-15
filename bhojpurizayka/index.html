@@ -1,1 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ed">
+  <meta name="description" content="Bhojpuri Zayka, Nilmatha, Lucknow — a family food restaurant serving fresh Indian, Chinese, tandoori, pizza, momo and more.">
+  <title>Bhojpuri Zayka | Family Food Restaurant, Lucknow</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header" id="home">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="Bhojpuri Zayka home">
+        <span class="brand-mark"><img src="assets/logo.jpg" alt="" width="62" height="46"></span>
+        <span>
+          <strong>Bhojpuri Zayka</strong>
+          <small>Family Food Restaurant</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#combos">Combos</a>
+        <a href="#visit">Visit us</a>
+        <a class="nav-call" href="tel:+917380911717">Call to order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="veg-dot" aria-hidden="true"></span> Vegetarian family restaurant · Lucknow</p>
+          <h1>आइटम टटके बा,<br><em>स्वाद हटके बा!</em></h1>
+          <p class="hero-lead">From homestyle paneer and thalis to sizzling Chinese, momos, pizza and chaat—there is something delicious for every mood.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="tel:+917380911717">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"/></svg>
+              73809 11717
+            </a>
+          </div>
+          <div class="hero-promises" aria-label="Restaurant highlights">
+            <span>Fresh ingredients</span>
+            <span>Authentic taste</span>
+            <span>Family friendly</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="sun-shape" aria-hidden="true"></div>
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="assets/hero-paneer.jpg" alt="Fresh paneer curry at Bhojpuri Zayka" width="748" height="1630">
+          </div>
+          <div class="hero-note note-top"><b>100+</b><span>tasty choices</span></div>
+          <div class="hero-note note-bottom"><span>Har bite</span><b>khaas hai!</b></div>
+        </div>
+      </div>
+
+      <div class="container taste-ribbon reveal" aria-label="Menu highlights">
+        <span>Paneer</span><i></i><span>Thali</span><i></i><span>Momos</span><i></i><span>Pizza</span><i></i><span>Chaat</span><i></i><span>Chinese</span>
+      </div>
+    </section>
+
+    <section class="story section-pad">
+      <div class="container story-grid">
+        <p class="section-kicker reveal">Made for every craving</p>
+        <div class="story-copy reveal">
+          <h2>Ek jagah. <em>Har mood ka swaad.</em></h2>
+          <p>Breakfast se dinner tak, quick snack se family thali tak—Bhojpuri Zayka ka wide vegetarian menu har visit ko thoda aur khaas banata hai.</p>
+        </div>
+        <a class="round-link reveal" href="info%20pdf.pdf" target="_blank" rel="noopener" aria-label="Open original menu PDF">
+          <span>Original menu</span>
+          <b aria-hidden="true">↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Full food menu</p>
+            <h2>Pick your <em>favourite</em></h2>
+          </div>
+          <p>All prices are shown in ₹. Use the search or category filters to find your dish fast.</p>
+        </div>
+
+        <div class="menu-toolbar reveal">
+          <label class="menu-search">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg>
+            <span class="sr-only">Search menu</span>
+            <input id="menuSearch" type="search" placeholder="Search paneer, momo, thali…" autocomplete="off">
+          </label>
+          <div class="menu-meta"><span id="resultCount" aria-live="polite"></span></div>
+        </div>
+
+        <div class="filter-scroll reveal" role="group" aria-label="Filter menu by category">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="pizza" aria-pressed="false">Pizza & Burger</button>
+          <button class="filter-chip" type="button" data-filter="breakfast" aria-pressed="false">Breakfast & Chaat</button>
+          <button class="filter-chip" type="button" data-filter="chinese" aria-pressed="false">Chinese</button>
+          <button class="filter-chip" type="button" data-filter="tandoor" aria-pressed="false">Momos & Tandoor</button>
+          <button class="filter-chip" type="button" data-filter="mains" aria-pressed="false">Main Course</button>
+          <button class="filter-chip" type="button" data-filter="breads" aria-pressed="false">Rice, Breads & Thali</button>
+          <button class="filter-chip" type="button" data-filter="drinks" aria-pressed="false">Drinks & Desserts</button>
+          <button class="filter-chip" type="button" data-filter="combos" aria-pressed="false">Combos</button>
+        </div>
+
+        <div class="menu-grid" id="menuContent"></div>
+        <noscript><p class="no-script">JavaScript is required for the searchable menu. You can still view the <a href="info%20pdf.pdf">original menu PDF</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="offers-section section-pad" id="offers">
+      <div class="container">
+        <div class="section-heading light-heading reveal">
+          <div>
+            <p class="section-kicker">Limited-time value</p>
+            <h2>Happy hours,<br><em>happier cravings.</em></h2>
+          </div>
+          <p>Special prices are valid during the time windows shown below.</p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="offer-card offer-card-main reveal">
+            <div class="offer-head">
+              <span class="offer-badge">50% off</span>
+              <div><small>Special offer</small><strong>07 AM – 03 PM</strong></div>
+            </div>
+            <div class="offer-list">
+              <p><span>Puri Sabji <small>(2 pcs)</small></span><del>60</del><b>₹30</b></p>
+              <p><span>Khasta Kachori <small>(2 pc)</small></span><del>60</del><b>₹30</b></p>
+              <p><span>Bun Makhan</span><del>60</del><b>₹30</b></p>
+              <p><span>Veg Maggi</span><del>60</del><b>₹30</b></p>
+              <p><span>Butter Maggi</span><del>80</del><b>₹40</b></p>
+              <p><span>Tea</span><i></i><b>₹10</b></p>
+              <p><span>Coffee</span><i></i><b>₹30</b></p>
+            </div>
+          </article>
+
+          <article class="offer-card reveal" data-delay="100">
+            <div class="offer-head compact">
+              <span class="offer-icon" aria-hidden="true">☀</span>
+              <div><small>Happy hours</small><strong>11 AM – 03 PM</strong></div>
+            </div>
+            <div class="offer-list simple">
+              <p><span>Steam Momo <small>(5 pcs)</small></span><b>₹20</b></p>
+              <p><span>Fry Momo <small>(5 pcs)</small></span><b>₹30</b></p>
+              <p><span>Veg Chowmein</span><b>₹30</b></p>
+              <p><span>Chilly Potato</span><b>₹40</b></p>
+              <p><span>Veggie Maggi</span><b>₹40</b></p>
+              <p><span>Bun Makhan</span><b>₹30</b></p>
+            </div>
+            <p class="offer-foot">Limited time offer · Same great taste & quality</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="combos-section section-pad" id="combos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Big flavour, easy choice</p>
+            <h2>Value-packed <em>combos</em></h2>
+          </div>
+          <a class="text-link" href="#menu" data-combo-filter>See all combos <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="combo-grid">
+          <article class="combo-card combo-photo pizza-combo reveal">
+            <div class="combo-label"><small>Teens Treat</small><strong>Pizza combo</strong><span>Margherita Pizza + Chilly Paneer + Cold Drink</span></div>
+            <b class="combo-price">₹160</b>
+          </article>
+          <article class="combo-card reveal" data-delay="80">
+            <span class="combo-num">01</span>
+            <small>Desi Swag</small>
+            <h3>Kadhai Paneer Combo</h3>
+            <p>Kadhai Paneer + 2 Butter Roti + Salad</p>
+            <b>₹120</b>
+          </article>
+          <article class="combo-card reveal" data-delay="160">
+            <span class="combo-num">02</span>
+            <small>Yumster Chinese</small>
+            <h3>Noodles & Chilly Paneer</h3>
+            <p>Veg Noodles + Chilly Paneer + Cold Drink</p>
+            <b>₹150</b>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="food-gallery" aria-label="Food gallery">
+      <figure class="reveal"><img src="assets/pizza.jpg" alt="Freshly baked vegetable pizza" loading="lazy" width="900" height="700"><figcaption>Cheesy pizza</figcaption></figure>
+      <figure class="reveal" data-delay="60"><img src="assets/dosa.jpg" alt="Crisp dosa served with chutney and sambhar" loading="lazy" width="900" height="700"><figcaption>South Indian</figcaption></figure>
+      <figure class="reveal" data-delay="120"><img src="assets/momo.jpg" alt="Steamed vegetarian momos" loading="lazy" width="900" height="700"><figcaption>Momo moments</figcaption></figure>
+      <figure class="reveal" data-delay="180"><img src="assets/drinks.jpg" alt="Colourful chilled mocktails" loading="lazy" width="900" height="700"><figcaption>Cool sips</figcaption></figure>
+    </section>
+
+    <section class="visit-section section-pad" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-copy reveal">
+          <p class="section-kicker">Come hungry</p>
+          <h2>जहाँ स्वाद मिले प्यार से, <em>और यादें बनें बार-बार से…</em></h2>
+          <p>Drop in with family and friends, or call ahead to place your order.</p>
+          <div class="contact-list">
+            <a href="tel:+917380911717"><span aria-hidden="true">☎</span><div><small>Call us</small><strong>73809 11717</strong></div></a>
+            <a href="tel:+919918675387"><span aria-hidden="true">☎</span><div><small>Alternate number</small><strong>99186 75387</strong></div></a>
+            <a href="https://share.google/DBZb6VqV2NiYUZnjx" target="_blank" rel="noopener"><span aria-hidden="true">⌖</span><div><small>Find us</small><strong>Open in Google Maps</strong></div></a>
+          </div>
+        </div>
+
+        <aside class="address-card reveal" data-delay="100">
+          <div class="map-art" aria-hidden="true"><span></span><i></i><b>⌖</b></div>
+          <p class="eyebrow">Bhojpuri Zayka · Lucknow</p>
+          <address>Choudhary Complex,<br>Near Mari Mata Puliya,<br>Nilmatha, Lucknow</address>
+          <a class="button button-primary" href="https://share.google/DBZb6VqV2NiYUZnjx" target="_blank" rel="noopener">Get directions <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="" width="74" height="54">
+        <div><strong>Bhojpuri Zayka</strong><span>Har bite khaas hai.</span></div>
+      </div>
+      <div class="footer-links"><a href="#menu">Menu</a><a href="#offers">Offers</a><a href="#visit">Contact</a><a href="info%20pdf.pdf" target="_blank" rel="noopener">Menu PDF</a></div>
+      <p>© <span id="year"></span> Bhojpuri Zayka. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-actions" aria-label="Quick actions">
+    <a href="tel:+917380911717"><span aria-hidden="true">☎</span> Call</a>
+    <a href="#menu"><span aria-hidden="true">☷</span> Menu</a>
+    <a href="https://share.google/DBZb6VqV2NiYUZnjx" target="_blank" rel="noopener"><span aria-hidden="true">⌖</span> Map</a>
+  </div>
+</body>
+</html>
