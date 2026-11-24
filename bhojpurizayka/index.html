@@ -7,8 +7,8 @@
   <meta name="description" content="Bhojpuri Zayka, Nilmatha, Lucknow — a family food restaurant serving fresh Indian, Chinese, tandoori, pizza, momo and more.">
   <title>Bhojpuri Zayka | Family Food Restaurant, Lucknow</title>
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=shortcuts-20261124">
+  <script src="script.js?v=shortcuts-20261124" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -61,15 +61,20 @@
         <div class="hero-visual reveal" data-delay="120">
           <div class="sun-shape" aria-hidden="true"></div>
           <div class="hero-photo-wrap">
-            <img class="hero-photo" src="assets/hero-paneer.jpg" alt="Fresh paneer curry at Bhojpuri Zayka" width="748" height="1630">
+            <img class="hero-photo" src="assets/hero-paneer.jpg" alt="Fresh paneer curry at Bhojpuri Zayka" width="748" height="1630" decoding="async" fetchpriority="high">
           </div>
           <div class="hero-note note-top"><b>100+</b><span>tasty choices</span></div>
           <div class="hero-note note-bottom"><span>Har bite</span><b>khaas hai!</b></div>
         </div>
       </div>
 
-      <div class="container taste-ribbon reveal" aria-label="Menu highlights">
-        <span>Paneer</span><i></i><span>Thali</span><i></i><span>Momos</span><i></i><span>Pizza</span><i></i><span>Chaat</span><i></i><span>Chinese</span>
+      <div class="container taste-ribbon reveal" aria-label="Quick menu filters">
+        <button class="taste-shortcut" type="button" data-menu-shortcut="mains" aria-controls="menuContent">Paneer</button>
+        <button class="taste-shortcut" type="button" data-menu-shortcut="breads" aria-controls="menuContent">Thali</button>
+        <button class="taste-shortcut" type="button" data-menu-shortcut="tandoor" aria-controls="menuContent">Momos</button>
+        <button class="taste-shortcut" type="button" data-menu-shortcut="pizza" aria-controls="menuContent">Pizza</button>
+        <button class="taste-shortcut" type="button" data-menu-shortcut="breakfast" aria-controls="menuContent">Chaat</button>
+        <button class="taste-shortcut" type="button" data-menu-shortcut="chinese" aria-controls="menuContent">Chinese</button>
       </div>
     </section>
 
@@ -80,8 +85,8 @@
           <h2>Ek jagah. <em>Har mood ka swaad.</em></h2>
           <p>Breakfast se dinner tak, quick snack se family thali tak—Bhojpuri Zayka ka wide vegetarian menu har visit ko thoda aur khaas banata hai.</p>
         </div>
-        <a class="round-link reveal" href="info%20pdf.pdf" target="_blank" rel="noopener" aria-label="Open original menu PDF">
-          <span>Original menu</span>
+        <a class="round-link reveal" href="info%20pdf.pdf" target="_blank" rel="noopener" aria-label="Open menu PDF">
+          <span>PDF Menu</span>
           <b aria-hidden="true">↗</b>
         </a>
       </div>
@@ -118,7 +123,11 @@
           <button class="filter-chip" type="button" data-filter="combos" aria-pressed="false">Combos</button>
         </div>
 
-        <div class="menu-grid" id="menuContent"></div>
+        <div class="menu-grid" id="menuContent" aria-busy="false"></div>
+        <div class="menu-progress" id="menuProgress" hidden>
+          <span id="menuProgressText"></span>
+          <button class="menu-load-more" id="menuLoadMore" type="button" aria-controls="menuContent">Show more menu</button>
+        </div>
         <noscript><p class="no-script">JavaScript is required for the searchable menu. You can still view the <a href="info%20pdf.pdf">original menu PDF</a>.</p></noscript>
       </div>
     </section>
@@ -202,10 +211,10 @@
     </section>
 
     <section class="food-gallery" aria-label="Food gallery">
-      <figure class="reveal"><img src="assets/pizza.jpg" alt="Freshly baked vegetable pizza" loading="lazy" width="900" height="700"><figcaption>Cheesy pizza</figcaption></figure>
-      <figure class="reveal" data-delay="60"><img src="assets/dosa.jpg" alt="Crisp dosa served with chutney and sambhar" loading="lazy" width="900" height="700"><figcaption>South Indian</figcaption></figure>
-      <figure class="reveal" data-delay="120"><img src="assets/momo.jpg" alt="Steamed vegetarian momos" loading="lazy" width="900" height="700"><figcaption>Momo moments</figcaption></figure>
-      <figure class="reveal" data-delay="180"><img src="assets/drinks.jpg" alt="Colourful chilled mocktails" loading="lazy" width="900" height="700"><figcaption>Cool sips</figcaption></figure>
+      <figure class="reveal"><img src="assets/pizza.jpg" alt="Freshly baked vegetable pizza" loading="lazy" decoding="async" width="900" height="700"><figcaption>Cheesy pizza</figcaption></figure>
+      <figure class="reveal" data-delay="60"><img src="assets/dosa.jpg" alt="Crisp dosa served with chutney and sambhar" loading="lazy" decoding="async" width="900" height="700"><figcaption>South Indian</figcaption></figure>
+      <figure class="reveal" data-delay="120"><img src="assets/momo.jpg" alt="Steamed vegetarian momos" loading="lazy" decoding="async" width="900" height="700"><figcaption>Momo moments</figcaption></figure>
+      <figure class="reveal" data-delay="180"><img src="assets/drinks.jpg" alt="Colourful chilled mocktails" loading="lazy" decoding="async" width="900" height="700"><figcaption>Cool sips</figcaption></figure>
     </section>
 
     <section class="visit-section section-pad" id="visit">
